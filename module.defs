@@ -34,6 +34,7 @@ FFMPEG.CONFIGURE.extra = \
     --disable-ffplay \
     --enable-ffprobe \
     --enable-ffmpeg \
+    --enable-filter=scale_npp \
     --disable-avdevice \
     --disable-muxers \
     --disable-network \
