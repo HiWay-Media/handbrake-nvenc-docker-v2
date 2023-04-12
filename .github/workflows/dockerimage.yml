@@ -44,7 +44,7 @@ jobs:
             fi
           elif [[ $GITHUB_REF == refs/pull/* ]]; then
             VERSION=pr-${{ github.event.number }}
-          then
+          else
             VERSION=HandBrake.1.6
           fi
           TAGS="${DOCKER_IMAGE}:${VERSION}"
