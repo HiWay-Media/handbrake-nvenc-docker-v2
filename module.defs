@@ -32,6 +32,7 @@ FFMPEG.CONFIGURE.extra = \
     --disable-doc \
     --disable-programs \
     --disable-ffplay \
+    --enable-ffprobe \
     --enable-ffmpeg \
     --disable-avdevice \
     --disable-muxers \
