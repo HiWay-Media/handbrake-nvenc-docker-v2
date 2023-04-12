@@ -99,7 +99,9 @@ FFMPEG.CONFIGURE.extra += \
     --enable-muxer=mov \
     --enable-muxer=mp4 \
     --enable-muxer=psp \
-    --enable-muxer=ipod
+    --enable-muxer=ipod \
+    --enable-muxer=hls \
+    --enable-muxer=flv 
 
 ifeq (darwin,$(HOST.system))
     FFMPEG.CONFIGURE.extra += --disable-audiotoolbox --disable-coreimage
