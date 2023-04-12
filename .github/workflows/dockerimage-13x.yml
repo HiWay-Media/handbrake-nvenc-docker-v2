@@ -9,6 +9,9 @@ on:
 jobs:
   handbrake:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       # Checkout the repository to the GitHub Actions runner
       - name: Checkout
