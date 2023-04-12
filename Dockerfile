@@ -178,6 +178,7 @@ RUN \
 # Copy HandBrake from base build image
 COPY --from=builder /usr/local /usr
 COPY --from=builder /HB/HandBrake/build/contrib/bin/ffmpeg /usr/local/bin/ffmpeg
+COPY --from=builder /HB/HandBrake/build/contrib/bin/ffprobe /usr/local/bin/ffprobe
 
 
 # Define mountable directories
