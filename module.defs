@@ -36,8 +36,8 @@ FFMPEG.CONFIGURE.extra = \
     --enable-ffmpeg \
     --enable-filter=scale_npp \
     --disable-avdevice \
-   ## --disable-muxers \
-   ## --disable-network \
+   --disable-muxers \
+   --disable-network \
     --enable-libzimg \
     --disable-hwaccels \
     --disable-vdpau \
@@ -94,7 +94,21 @@ FFMPEG.CONFIGURE.extra += \
     --enable-encoder=libfdk_aac
 endif
 
-
+FFMPEG.CONFIGURE.extra += \
+    --enable-muxer=matroska \
+    --enable-muxer=webm \
+    --enable-muxer=mov \
+    --enable-muxer=mp4 \
+    --enable-muxer=psp \
+    --enable-muxer=ipod \
+    --enable-muxer=hls \
+    --enable-muxer=flv \
+    --enable-muxer=mjpeg \
+    --enable-muxer=mpjpeg \
+    --enable-muxer=singlejpeg \
+    --enable-muxer=smjpeg \
+    --enable-muxer=image2 \
+    --enable-muxer=image2pipe
 
 ifeq (darwin,$(HOST.system))
     FFMPEG.CONFIGURE.extra += --disable-audiotoolbox --disable-coreimage
