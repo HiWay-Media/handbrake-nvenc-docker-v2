@@ -51,9 +51,8 @@ RUN ./configure --prefix=/usr/local \
                 --enable-numa \
                 --enable-nvenc \
                 --enable-qsv \           
-                #--enable-nvdec \ 
-                #--enable-libextra \    
                 --launch-jobs=$(nproc) \
                 --launch
-
+  
+                
 RUN make -j$(nproc) --directory=build install
