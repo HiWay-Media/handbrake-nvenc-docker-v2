@@ -64,7 +64,6 @@ RUN ./configure --prefix=/usr/local \
                 --enable-qsv \
                 --enable-nvenc \
                 --enable-nvdec \
-                --enable-libextra \
                 --launch-jobs=$(nproc) \
                 --launch
 
