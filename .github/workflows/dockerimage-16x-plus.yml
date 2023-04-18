@@ -1,4 +1,4 @@
-name: Dockerimage with Dockerfile
+name: Dockerimage 1.6x Plus
 #
 on:
   push:
