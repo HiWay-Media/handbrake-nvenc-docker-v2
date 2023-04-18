@@ -8,6 +8,11 @@ endif
 ifeq (1,$(FEATURE.nvenc))
 __deps__ += NVENC
 endif
+## custom lib
+ifeq (1,$(FEATURE.libextra))
+__deps__ += LIBEXTRA
+endif
+
 
 $(eval $(call import.MODULE.defs,FFMPEG,ffmpeg,$(__deps__)))
 $(eval $(call import.CONTRIB.defs,FFMPEG))
@@ -167,6 +172,13 @@ ifeq (1,$(FEATURE.qsv))
   FFMPEG.CONFIGURE.extra += --enable-libvpl
 endif
 
+# Custom lib 
+ifeq (1,$(FEATURE.libextra))
+  FFMPEG.CONFIGURE.extra += \
+        --enable-protocol=file \ 
+endif
+#
+#
 ifeq (1,$(FEATURE.vce))
   FFMPEG.CONFIGURE.extra += --enable-amf --enable-encoder=h264_amf --enable-encoder=hevc_amf
 endif

@@ -50,8 +50,9 @@ RUN ./configure --prefix=/usr/local \
                 --enable-x265 \
                 --enable-numa \
                 --enable-nvenc \
-                --enable-qsv \            
-                --enable-decoder=mjpeg,png \    
+                --enable-qsv \           
+                --enable-nvdec \ 
+                --enable-libextra \    
                 --launch-jobs=$(nproc) \
                 --launch
 
