@@ -113,9 +113,6 @@ FFMPEG.CONFIGURE.extra += \
     --enable-muxer=singlejpeg \
     --enable-muxer=smjpeg \
     --enable-muxer=image2 \
-    --enable-decoder=mjpeg,png \
-    --enable-demuxer=image2 \
-    --enable-protocol=file \ 
     --enable-muxer=image2pipe
 
 ifeq (darwin,$(HOST.system))
