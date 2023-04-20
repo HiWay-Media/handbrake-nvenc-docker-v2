@@ -61,7 +61,7 @@ RUN ./configure --prefix=/usr/local \
                 --enable-numa \
                 --enable-qsv \
                 --enable-nvenc \
-                --enable-nvdec \
+                #--enable-nvdec \
                 --launch-jobs=$(nproc) \
                 --launch
 
