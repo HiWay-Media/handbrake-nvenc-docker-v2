@@ -8,14 +8,14 @@ MAINTAINER allan.nava@hiway.media
 ENV HANDBRAKE_VERSION_TAG 1.6.0
 ENV HANDBRAKE_VERSION_BRANCH 1.6.0
 ENV HANDBRAKE_DEBUG_MODE none
-
+#
 ENV HANDBRAKE_URL https://api.github.com/repos/HandBrake/HandBrake/releases/tags/$HANDBRAKE_VERSION
-
+#
 ENV HANDBRAKE_URL_GIT https://github.com/HandBrake/HandBrake.git
 #ENV HANDBRAKE_URL_GIT https://github.com/HiWay-Media/Handbrake.git
 ENV DEBIAN_FRONTEND noninteractive
-
-
+#
+#
 WORKDIR /HB
 
 ## Prepare
