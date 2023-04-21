@@ -67,7 +67,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
+      #
       # Build image and push to registry
       - name: Build and push
         uses: docker/build-push-action@v4
@@ -75,6 +75,8 @@ jobs:
           context: .
           file: ./Dockerfile.15x
           platforms: linux/amd64
+          cache-from: type=registry,ref=user/app:latest
+          cache-to: type=inline
           push: true
           tags: ${{ steps.prep.outputs.tags }}
           labels: |
