@@ -49,7 +49,7 @@ RUN ./configure --prefix=/usr/local \
                 --enable-x265 \
                 --enable-numa \
                 --enable-nvenc \
-                --enable-qsv \
+                #--enable-qsv \
                 --launch-jobs=$(nproc) \
                 --launch
 
