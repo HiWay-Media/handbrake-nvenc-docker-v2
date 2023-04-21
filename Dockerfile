@@ -2,8 +2,8 @@ FROM debian:11 AS builder
 #
 MAINTAINER allan.nava@hiway.media
 #
-ENV HANDBRAKE_VERSION_TAG 1.6.1
-ENV HANDBRAKE_VERSION_BRANCH master
+ENV HANDBRAKE_VERSION_TAG 1.6.x
+ENV HANDBRAKE_VERSION_BRANCH 1.6.x
 #
 #ENV HANDBRAKE_VERSION_TAG 1.6.1
 #ENV HANDBRAKE_VERSION_BRANCH 1.6.x
@@ -51,6 +51,7 @@ WORKDIR /HB/HandBrake
 
 RUN git checkout $HANDBRAKE_VERSION_TAG
 RUN cat /HB/HandBrake/contrib/ffmpeg/module.defs 
+RUN cat module.defs
 ADD module.defs /HB/HandBrake/contrib/ffmpeg/module.defs
 RUN find / -xdev  -name module.defs -ls
 RUN ./scripts/repo-info.sh > version.txt
@@ -64,7 +65,6 @@ RUN ./configure --prefix=/usr/local \
                 --enable-numa \
                 --enable-qsv \
                 --enable-nvenc \
-                #--enable-nvdec \
                 --launch-jobs=$(nproc) \
                 --launch
 
