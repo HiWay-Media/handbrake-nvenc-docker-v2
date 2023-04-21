@@ -1,4 +1,4 @@
-FROM debian:11 AS builder
+FROM debian:10 AS builder
 
 MAINTAINER zocker-160
 
